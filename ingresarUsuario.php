@@ -16,10 +16,8 @@ $condicion=$_GET['condicion'];
 $enfermedad=$_GET['enfermedad'];
 $medicamentos=$_GET['medicamentos'];
 
-ejecutarSQLCommand("INSERT INTO `usuario` (identificacion, nombre, fecha, tipo, eps, 
-	correo, telefono, direccion, contacto, tel_contacto, user, pass, condicion, enfermedad, medicamentos)
-VALUES ( '$identificacion', '$nombre', '$fecha', '$tipo', '$eps', '$correo', 
-	'$telefono','$direccion', '$contacto', '$tel_contacto', '$user', '$pass', $condicion, $enfermedad, $medicamentos)
+ejecutarSQLCommand("INSERT INTO `usuario` (`identificacion`, `nombre`, `fecha`, `tipo`, `eps`, `correo`, `telefono`, `direccion`, `contacto`, `tel_contacto`, `user`, `pass`, `condicion`, `enfermedad`, `medicamentos`)
+VALUES ('$identificacion','$nombre','$fecha','$tipo','$eps','$correo','$telefono','$direccion','$contacto','$tel_contacto','$user','$pass','$condicion','$enfermedad', '$medicamentos')
 
  ON DUPLICATE KEY UPDATE `nombre`= '$nombre';");
 
